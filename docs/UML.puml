@@ -1,0 +1,133 @@
+@startuml
+class User {
+  - username : string
+  - password : string
+  - email : string
+  - age : int
+  - address : string
+  - role : Role
+  + login(username, password) : bool
+  + logout() : void
+}
+
+class Administrator {
+  + createUser(user)
+  + removeUser(username)
+  + updateUser(newName, oldName)
+  + addFlight()
+  + removeFlight()
+  + updateFlight()
+  + viewFlights()
+  + addAircraft()
+  + removeAircraft()
+  + updateAircraft()
+  + generateOperationalReport()
+  + generateMaintenanceReport()
+  + generateUserActivityReport()
+}
+
+class BookingAgent {
+  - officeLocation : string
+  - workHours : string
+  + SearchFlight()
+  + BookFlight(reservation)
+  + CancelFlight(reservationId)
+  + UpdateFlight(reservationId)
+}
+
+class Passenger {
+  - passengerId : string
+  + SearchFlight()
+  + wishToBook(reservation)
+  + viewMyReservations()
+  + checkIn(reservationId)
+}
+
+class Flight {
+  - flightNumber : string
+  - origin : string
+  - date : string
+  - destination : string
+  - departure : string
+  - departureTime : string
+  - arrivalTime : string
+  - price : string
+  - aircraftType : string
+  - status : string
+  - totalSeats : int
+  + displayFlight()
+}
+
+class Reservation {
+  - reservationId : string
+  - passenger : shared_ptr<Passenger>
+  - flight : weak_ptr<Flight>
+  - seat : string
+  - PaymentMethod : string
+  - PaymentDetails : string
+  + displayReservation()
+}
+
+class Reservation_System {
+  - reservations : vector<shared_ptr<Reservation>>
+  - filePath : string
+  + CreateReservation(reservation)
+  + CancelReservation(reservationId)
+  + updateReservation(reservationId)
+  + showReservations()
+  + findReservationByID(reservationId)
+}
+
+class Payment {
+  - paymentId : string
+  - reservationID : string
+  - amount : double
+  - status : string
+  + process()
+  + refund()
+  + saveToFile()
+}
+
+class CheckIn {
+  - Gate : string
+  - BoardingTime : string
+  + checkIn()
+  + displayBoardingPass()
+}
+
+class Aircraft {
+  - aircraftID : string
+  - model : string
+  - capacity : int
+  - status : string
+  + displayAircraft()
+}
+
+class Maintenance {
+  - recordID : string
+  - aircraftID : string
+  - type : string
+  - datePerformed : string
+  - nextDue : string
+  - technician : string
+  - remarks : string
+  - status : string
+  + logMaintenance()
+  + viewMaintenance()
+}
+
+User <|-- Administrator
+User <|-- BookingAgent
+User <|-- Passenger
+Administrator --> Flight
+Administrator --> Aircraft
+Administrator --> User
+BookingAgent --> Reservation
+Passenger --> Reservation
+Reservation --> Passenger
+Reservation --> Flight
+CheckIn <|-- Reservation
+Reservation_System *-- Reservation
+Payment --> Reservation
+Maintenance --> Aircraft
+@enduml

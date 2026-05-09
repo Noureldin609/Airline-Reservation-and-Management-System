@@ -1,0 +1,8 @@
+flightNumber,origin,date,destination,departure,departureTime,arrivalTime,price,aircraft_type,status,total_seats
+AA100,USA,2025-10-15,LAX,G001,11:30,14:00,450.50,Boeing 737,On Time,180
+UA201,EGY,2025-10-15,MIA,G002,15:00,18:30,320.00,Airbus A320,Delayed,150
+DL305,PARIS,2025-10-16,Miami,G003,08:00,11:30,510.75,Boeing 787,Canceled,200
+B6410,BERLIN,2025-10-16,mexico,G004,20:45,23:45,280.99,Embraer 192,On Time,180
+B6411,TOKYO,2025-10-29,MIAMI,G005,20:45,21:45,258.50,Boeing 737,Delayed,150
+FL456,EGY,2025-10-30,USA,CairoAirport,10:00,12:00,800,Boeing,On Time,300
+FL987,Tanzania,2025-11-25,Germany,airport,13:00,15:00,123,Boeing,On Time,500

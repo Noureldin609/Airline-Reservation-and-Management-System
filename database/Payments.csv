@@ -1,0 +1,12 @@
+transactionID,reservationID,amount,paymentMethod,status
+P001,R002,258.5,Cash,success
+P002,R006,280.99,PayPal,success
+Pa002,Pa002,258.5,success,Pending
+P003,R010,320,Cash,Refunded
+P004,pass123,123,Credit Card,Refunded
+T141,Pa002,123,PayPal,success
+P101,R1734,258.5,Paypal,Failed
+P101,R1734,258.5,paypal,Refunded
+T141,R987,450.5,cash,success
+P101,R456,800,cash,success
+T141,R1009,510.75,PayPal,success

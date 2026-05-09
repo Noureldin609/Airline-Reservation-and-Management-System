@@ -1,0 +1,56 @@
+
+1. System Architecture
+
+Core Modules:
+
+User Management (authentication, role-based access).
+
+Flight & Aircraft Management.
+
+Reservation & Payment Processing.
+
+Passenger Services (profiles, loyalty).
+
+Check-In & Boarding.
+
+Maintenance Tracking.
+
+Reporting & Analytics.
+---------------------------------------------------
+2. OOP Design
+
+Classes & Objects:
+
+User (base), Administrator, BookingAgent, Passenger.
+
+Flight, Aircraft, Crew.
+
+Reservation, Payment, Seat.
+
+Maintenance, Report.
+
+Inheritance:
+
+User → specialized into Administrator, BookingAgent, Passenger.
+
+Polymorphism:
+
+Role-specific methods (e.g., displayRole(), manageFlights(), bookFlight()).
+
+Virtual functions for booking, payment, and maintenance handling.
+---------------------------------------------------
+3. Data Persistence
+
+JSON Files:
+
+Passengers.json, Bookings.json → nested objects.
+
+CSV Files:
+
+Flights.csv, Aircraft.csv, Maintenance.csv.
+---------------------------------------------------
+4. Error Handling
+
+Input validation (dates, flight numbers, seat selections).
+
+Exceptions (try/catch) for file operations and invalid data.

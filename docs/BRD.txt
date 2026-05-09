@@ -1,0 +1,57 @@
+1. Project Overview
+
+The Airline Reservation and Management System is a console-based C++ application that simulates core airline operations. It supports multiple user roles—Administrators, Booking Agents, and Passengers—with secure, role-based access. The system enables flight scheduling, aircraft and crew management, reservations, passenger services, maintenance tracking, and reporting.
+----------------------------------------------------
+2. Objectives
+
+Provide a complete solution for managing flights, aircraft, bookings, and passengers.
+
+Ensure secure and role-based user access.
+
+Offer intuitive reservation, seat selection, check-in, and boarding services.
+
+Maintain compliance with regulatory requirements (e.g., crew flight hours, maintenance schedules).
+
+Enable data-driven decision-making through reporting and analytics.
+----------------------------------------------------
+3. Stakeholders
+
+Administrators → Manage users, flights, aircraft, and crew.
+
+Booking Agents → Assist passengers with reservations, payments, and check-in.
+
+Passengers → Search, book, check in, and manage profiles.
+
+Maintenance Staff (indirect) → Access maintenance logs and schedules.
+----------------------------------------------------
+4. High-Level Features
+
+User Roles & Authentication (Admin, Agent, Passenger).
+
+Flight Management (scheduling, updates, removals).
+
+Aircraft & Crew Management (fleet info, maintenance, crew assignments).
+
+Booking System (search, reservation, cancellation, seat selection, payments).
+
+Passenger Management (profiles, loyalty programs, travel history).
+
+Check-In & Boarding (online/airport check-in, boarding passes).
+
+Maintenance Tracking (schedules, logs, compliance).
+
+Flight Status Updates (real-time delays, cancellations).
+
+Reporting & Analytics (operational, financial, maintenance, user activity).
+
+Data Persistence (via JSON and CSV files).
+----------------------------------------------------
+5. Success Criteria
+
+All core modules function independently and together.
+
+System ensures data persistence between runs.
+
+Each role (Admin, Agent, Passenger) can only access permitted functionality.
+
+User interface is intuitive and error-handling is robust.
